@@ -30,6 +30,10 @@ button {
   font-size: 1.5rem;
 }
 
+label {
+  color: rgb(214, 227, 223);
+}
+
 button {
   margin-left: 10px;
   margin-top: 7px;
@@ -45,9 +49,49 @@ h2 {
   color: rgb(214, 227, 223);
   font-size: 1.5rem;
 }
+h1 {
+  color: rgb(214, 227, 223);
+}
 
 p {
   line-height: 1.5rem;
   padding: 10px;
   color: rgb(214, 227, 223);
+  background-color: rgb(6, 69, 69);
+}
+
+/* Table CSS */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(214, 227, 223);
+}
+
+th,
+td {
+  border: 1px solid rgb(214, 227, 223);
+  padding: 8px;
+}
+
+th {
+  background-color: rgba(90, 174, 174, 0.71);
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(90, 174, 174, 0.71);
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* FOOTER CSS */
+
+footer {
+  text-align: center;
 }
