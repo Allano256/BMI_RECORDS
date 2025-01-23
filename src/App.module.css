@@ -1,0 +1,15 @@
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input input,
+button {
+  width: 6.5em;
+  margin-top: 10px;
+}
+
+.input label,
+button {
+  margin-top: 5px;
+}
