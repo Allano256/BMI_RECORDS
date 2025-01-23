@@ -73,7 +73,7 @@ const [heightUnit, setHeightUnit]= useState("meters");
        <p><b>Body Mass Index</b> is a simple and widely used measure to assess a person's body weight relative to their height. It helps determine whether an individual is <b>underweight,</b>  <b>healthy</b> , <b>overweight</b>  or <b>obese.</b> 
        Using our <b>BMI Calculator tool</b>, you will be able to monitor your health status,keep track of your BMI, promote awareness and healthier lifestyle choices.</p> 
 
-            <label htmlFor="weight">Enter weight: <select value={weightUnit} onChange={handleWeightUnitChange} >
+            <label htmlFor="weight">Select weight: <select value={weightUnit} onChange={handleWeightUnitChange} >
               <option value="kgs">kgs</option>
               <option value="lbs">lbs</option>
             </select> </label>
@@ -82,7 +82,7 @@ const [heightUnit, setHeightUnit]= useState("meters");
 
 
 
-            <label htmlFor="height">Enter height: <select value={heightUnit} onChange={handleHeightUnitChange} >
+            <label htmlFor="height">Select Height: <select value={heightUnit} onChange={handleHeightUnitChange} >
               <option value="meters">meters</option>
               <option value="centimeters">centimeters</option>
             </select> </label>
@@ -98,6 +98,7 @@ const [heightUnit, setHeightUnit]= useState("meters");
 
             { bmi && <div>
               <h2>Your BMI is: {bmi}kg/m&sup2;</h2>
+              <p>Below is a visual representation of the different classifications of BMI,if your BMI is between 25.0 -29.9 and beyond... We recommend that you contact <b>Doctor Genuis</b> for a structured weight loss program.</p>
             
 
             </div>}
