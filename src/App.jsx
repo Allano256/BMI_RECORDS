@@ -43,6 +43,7 @@ function App() {
     <section>
      
        <div className={styles.input}>
+
             <label htmlFor="weight">Enter weight: </label>
             <input type="number" value={weight} onChange={handleWeightChange} placeholder='Enter weight...'  />
             <label htmlFor="height">Enter height in cms: </label>
@@ -53,11 +54,17 @@ function App() {
             </div>
             
 
-            { bmi && <div><h3>Your BMI is: {bmi}</h3></div>}
+            { bmi && <div>
+              <h2>Your BMI is: {bmi}</h2>
+             <p><b>Body Mass Index</b> is a simple and widely used measure to assess a person's body weight relative to their height. It helps determine whether an individual is underweight, healthy, overweight or obese.
+             Using <b>BMI Calculator tool</b>, you will be able to monitor your health status,keep track of your BMI, promote awareness and healthier lifestyle choices.</p> 
+
+            </div>}
             
        </div>
-      
     </section>
+
+   
 
    
     </>

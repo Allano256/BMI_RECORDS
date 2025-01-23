@@ -5,7 +5,7 @@
   align-items: center;
   margin-top: 50px;
   background-color: rgba(90, 174, 174, 0.71);
-  width: 500px;
+  /* width: 500px; */
   padding-top: 15px;
   border-radius: 10px;
 }
@@ -15,7 +15,7 @@ input {
   border-radius: 5px;
   padding-left: 4px;
   background-color: rgb(6, 69, 69);
-  color: white;
+  color: rgb(214, 227, 223);
 }
 
 .input input,
@@ -38,10 +38,16 @@ button {
   border: none;
   cursor: pointer;
   background-color: rgb(6, 69, 69);
-  color: white;
+  color: rgb(214, 227, 223);
 }
 
-h3 {
-  color: rgb(5, 147, 100);
-  font-size: 2rem;
+h2 {
+  color: rgb(214, 227, 223);
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.5rem;
+  padding: 10px;
+  color: rgb(214, 227, 223);
 }
