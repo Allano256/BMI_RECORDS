@@ -45,7 +45,7 @@ function App() {
      
        <div className={styles.input}>
         <h1>Welcome to BMI Calculator...please enter your height and weight to get started.</h1>
-       <p><b>Body Mass Index</b> is a simple and widely used measure to assess a person's body weight relative to their height. It helps determine whether an individual is underweight, healthy, overweight or obese.
+       <p><b>Body Mass Index</b> is a simple and widely used measure to assess a person's body weight relative to their height. It helps determine whether an individual is <b>underweight,</b>  <b>healthy</b> , <b>overweight</b>  or <b>obese.</b> 
        Using our <b>BMI Calculator tool</b>, you will be able to monitor your health status,keep track of your BMI, promote awareness and healthier lifestyle choices.</p> 
 
             <label htmlFor="weight">Enter weight: </label>
