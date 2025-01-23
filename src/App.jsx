@@ -9,10 +9,12 @@ function App() {
 
   const handleWeightChange = (e)=> {
     setNewWeight(e.target.value);
+    
   }
 
   const handleHeightChange=(e)=>{
     setNewHeight(e.target.value);
+    
   }
 
   const CalculateBMI = ()=>{
@@ -27,6 +29,12 @@ function App() {
         setBmi(bmiValue);
       
   };
+
+  const ClearScreen =()=>{
+    setNewHeight("");
+    setNewWeight("");
+    setBmi(null)
+  }
   
   return (
     <>
@@ -37,7 +45,11 @@ function App() {
             <input type="number" value={weight} onChange={handleWeightChange} placeholder='Enter weight...'  />
             <label htmlFor="height">Enter height in cms: </label>
             <input type="number" value={height} onChange={handleHeightChange} placeholder='Enter height...' />
+            <div className={styles.buttons}>
             <button onClick={CalculateBMI} >Submit</button>
+            <button onClick={ClearScreen}>Clear entry.</button>
+            </div>
+            
 
             { bmi && <div><h3>Your BMI is: {bmi}</h3></div>}
             
