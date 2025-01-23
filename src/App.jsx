@@ -11,6 +11,25 @@ function App() {
 const [weightUnit, setWeightUnit] = useState("kgs");
 const [heightUnit, setHeightUnit]= useState("meters");
 
+const BmiResults =()=>{
+  if(bmi < 18.5 ){
+    return <p>Underweight.</p>
+  } else if(bmi >= 18.5 && bmi <= 24.9){
+    return <p> You have normal weight</p>
+  }
+   else if(bmi >= 25.0 && bmi <= 29.9 ){
+    return <p>You have over weight</p>
+  }  else if(bmi >= 30.0 && bmi <= 34.9) {
+    return <p>You have obesity class 1</p>
+  } else if(bmi >= 35.0 && bmi <= 39.9){
+    return <p>You have obesity class 2</p>
+  } else if (bmi > 40.0){
+    return <p>You have class 3 obesity</p>
+  } else {
+    return <p>Invalid BMI value.</p>
+  }
+}
+
 
   const handleWeightChange = (e)=> {
     setNewWeight(e.target.value);
@@ -96,12 +115,14 @@ const [heightUnit, setHeightUnit]= useState("meters");
             </div>
             
 
-            { bmi && <div>
-              <h2>Your BMI is: {bmi}kg/m&sup2;</h2>
-              <p>Below is a visual representation of the different classifications of BMI,if your BMI is between 25.0 -29.9 and beyond... We recommend that you contact <b>Doctor Genuis</b> for a structured weight loss program.</p>
+            { bmi && <BmiResults /> 
+            // <div>
+            //   <h2>Your BMI is: {bmi}kg/m&sup2;</h2>
+            //   <p>Below is a visual representation of the different classifications of BMI,if your BMI is between 25.0 -29.9 and beyond... We recommend that you contact <b>Doctor Genuis</b> for a structured weight loss program.</p>
             
 
-            </div>}
+            // </div>
+            }
             
        </div>
     </section>
