@@ -30,7 +30,7 @@ function App() {
       
   };
 
-  const ClearScreen =()=>{
+  const ResetScreen =()=>{
     setNewHeight("");
     setNewWeight("");
     setBmi(null)
@@ -38,8 +38,10 @@ function App() {
   
   return (
     <>
+   
     
     <section>
+     
        <div className={styles.input}>
             <label htmlFor="weight">Enter weight: </label>
             <input type="number" value={weight} onChange={handleWeightChange} placeholder='Enter weight...'  />
@@ -47,7 +49,7 @@ function App() {
             <input type="number" value={height} onChange={handleHeightChange} placeholder='Enter height...' />
             <div className={styles.buttons}>
             <button onClick={CalculateBMI} >Submit</button>
-            <button onClick={ClearScreen}>Clear entry.</button>
+            {bmi ? <button onClick={ResetScreen}>Reset</button> : ""}
             </div>
             
 

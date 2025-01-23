@@ -4,27 +4,44 @@
   text-align: center;
   align-items: center;
   margin-top: 50px;
+  background-color: rgba(90, 174, 174, 0.71);
+  width: 500px;
+  padding-top: 15px;
+  border-radius: 10px;
 }
 
 input {
   height: 20px;
   border-radius: 5px;
   padding-left: 4px;
+  background-color: rgb(6, 69, 69);
+  color: white;
 }
 
 .input input,
 button {
   width: 6.5em;
-  margin-top: 10px;
+  margin: 10px 0px;
   font-size: 1rem;
 }
 
 .input label,
 button {
-  margin-top: 7px;
   font-size: 1.5rem;
 }
 
 button {
   margin-left: 10px;
+  margin-top: 7px;
+
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(6, 69, 69);
+  color: white;
+}
+
+h3 {
+  color: rgb(5, 147, 100);
+  font-size: 2rem;
 }
