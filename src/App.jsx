@@ -49,9 +49,9 @@ function App() {
        Using our <b>BMI Calculator tool</b>, you will be able to monitor your health status,keep track of your BMI, promote awareness and healthier lifestyle choices.</p> 
 
             <label htmlFor="weight">Enter weight: </label>
-            <input type="number" value={weight} onChange={handleWeightChange} placeholder='Enter weight...'  />
+            <input type="number" value={weight} onChange={handleWeightChange} placeholder='15...'  />
             <label htmlFor="height">Enter height in cms: </label>
-            <input type="number" value={height} onChange={handleHeightChange} placeholder='Enter height...' />
+            <input type="number" value={height} onChange={handleHeightChange} placeholder='100...' />
             <div className={styles.buttons}>
             <button onClick={CalculateBMI} >Submit</button>
             {bmi ? <button onClick={ResetScreen}>Reset</button> : ""}
