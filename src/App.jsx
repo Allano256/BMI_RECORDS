@@ -7,6 +7,10 @@ function App() {
   const [height, setNewHeight] = useState("");
   const [bmi, setBmi] = useState(null);
 
+  // State to store selected units
+const [weightUnit, setWeightUnit] = useState("kgs");
+const [heightUnit, setHeightUnit]= useState("meters");
+
 
   const handleWeightChange = (e)=> {
     setNewWeight(e.target.value);
@@ -18,18 +22,39 @@ function App() {
     
   }
 
+  const handleWeightUnitChange=(e)=>{
+    setWeightUnit(e.target.value)
+  }
+  
+  const handleHeightUnitChange=(e)=>{
+    setHeightUnit(e.target.value)
+  }
+
   const CalculateBMI = ()=>{
-    
-      if(!weight || !height){
+    let weightInKg = parseFloat(weight);
+    let heightInmeters = parseFloat(height);
+
+    if(weightUnit === "lbs"){
+      weightInKg = (weightInKg * 0.453592);
+
+    }
+    if(heightUnit === "centimeters"){
+      heightInmeters= heightInmeters / 100;
+    }
+       
+      
+      if(!weightInKg || !heightInmeters){
         alert("Both fields needed...");
         return;
-      }
+      };
+
+      const bmiValue= (weightInKg /(heightInmeters**2)).toFixed(2);
+      setBmi(bmiValue);
+      } 
+        
+        
       
-        const heightInmeters = height / 100;
-        const bmiValue= (weight /(heightInmeters**2)).toFixed(2);
-        setBmi(bmiValue);
-      
-  };
+  
 
   const ResetScreen =()=>{
     setNewHeight("");
@@ -48,10 +73,23 @@ function App() {
        <p><b>Body Mass Index</b> is a simple and widely used measure to assess a person's body weight relative to their height. It helps determine whether an individual is <b>underweight,</b>  <b>healthy</b> , <b>overweight</b>  or <b>obese.</b> 
        Using our <b>BMI Calculator tool</b>, you will be able to monitor your health status,keep track of your BMI, promote awareness and healthier lifestyle choices.</p> 
 
-            <label htmlFor="weight">Enter weight: </label>
+            <label htmlFor="weight">Enter weight: <select value={weightUnit} onChange={handleWeightUnitChange} >
+              <option value="kgs">kgs</option>
+              <option value="lbs">lbs</option>
+            </select> </label>
+            
             <input type="number" value={weight} onChange={handleWeightChange} placeholder='15...'  />
-            <label htmlFor="height">Enter height in cms: </label>
+
+
+
+            <label htmlFor="height">Enter height: <select value={heightUnit} onChange={handleHeightUnitChange} >
+              <option value="meters">meters</option>
+              <option value="centimeters">centimeters</option>
+            </select> </label>
             <input type="number" value={height} onChange={handleHeightChange} placeholder='100...' />
+
+
+
             <div className={styles.buttons}>
             <button onClick={CalculateBMI} >Submit</button>
             {bmi ? <button onClick={ResetScreen}>Reset</button> : ""}

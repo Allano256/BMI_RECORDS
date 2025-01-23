@@ -60,6 +60,13 @@ p {
   background-color: rgb(6, 69, 69);
 }
 
+select {
+  background-color: rgb(6, 69, 69);
+  color: rgb(214, 227, 223);
+  border: none;
+  height: 15px;
+}
+
 /* Table CSS */
 
 table {
@@ -87,7 +94,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-  background-color: #f1f1f1;
+  background-color: #cfc6c69e;
 }
 
 /* FOOTER CSS */
