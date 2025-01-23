@@ -12,22 +12,36 @@ const [weightUnit, setWeightUnit] = useState("kgs");
 const [heightUnit, setHeightUnit]= useState("meters");
 
 const BmiResults =()=>{
+  let classificationMessage;
   if(bmi < 18.5 ){
-    return <p>Underweight.</p>
+    classificationMessage="You are Underweight.";
+    
   } else if(bmi >= 18.5 && bmi <= 24.9){
-    return <p> You have normal weight</p>
+    classificationMessage="You have Normal Weight";
+    
   }
    else if(bmi >= 25.0 && bmi <= 29.9 ){
-    return <p>You have over weight</p>
+    classificationMessage="You are  Overweight";
+    
   }  else if(bmi >= 30.0 && bmi <= 34.9) {
-    return <p>You have obesity class 1</p>
+    classificationMessage="You have Obesity class 1";
+   
   } else if(bmi >= 35.0 && bmi <= 39.9){
-    return <p>You have obesity class 2</p>
+    classificationMessage="You have Obesity class 2";
+    
   } else if (bmi > 40.0){
-    return <p>You have class 3 obesity</p>
+    classificationMessage="You have Obesity class 3";
+    
   } else {
-    return <p>Invalid BMI value.</p>
+    classificationMessage="Invalid BMI value.";
+    
   }
+  return (
+    <div>
+      <h2>Your BMI is: {bmi}kg/m&sup2;</h2>
+      <p>{classificationMessage}</p>
+    </div>
+  )
 }
 
 
@@ -115,13 +129,8 @@ const BmiResults =()=>{
             </div>
             
 
-            { bmi && <BmiResults /> 
-            // <div>
-            //   <h2>Your BMI is: {bmi}kg/m&sup2;</h2>
-            //   <p>Below is a visual representation of the different classifications of BMI,if your BMI is between 25.0 -29.9 and beyond... We recommend that you contact <b>Doctor Genuis</b> for a structured weight loss program.</p>
+            { bmi && <BmiResults />
             
-
-            // </div>
             }
             
        </div>
