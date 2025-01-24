@@ -32,6 +32,8 @@ button {
 
 label {
   color: rgb(214, 227, 223);
+  display: inline-flex;
+  align-items: center;
 }
 
 button {
@@ -54,7 +56,8 @@ h1 {
 }
 
 p {
-  line-height: 1.5rem;
+  line-height: 1.8;
+
   padding: 10px;
   color: rgb(214, 227, 223);
   background-color: rgb(6, 69, 69);
@@ -64,7 +67,8 @@ select {
   background-color: rgb(6, 69, 69);
   color: rgb(214, 227, 223);
   border: none;
-  height: 15px;
+  height: 20px;
+  margin-left: 2px;
 }
 
 /* Table CSS */

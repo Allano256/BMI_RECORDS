@@ -24,13 +24,13 @@ const BmiResults =()=>{
     classificationMessage="You are  Overweight";
     
   }  else if(bmi >= 30.0 && bmi <= 34.9) {
-    classificationMessage="You have Obesity class 1";
+    classificationMessage="You have Obesity class 1, follow our healthplan.";
    
   } else if(bmi >= 35.0 && bmi <= 39.9){
-    classificationMessage="You have Obesity class 2";
+    classificationMessage="You have Obesity class 2, follow our healthplan.";
     
   } else if (bmi > 40.0){
-    classificationMessage="You have Obesity class 3";
+    classificationMessage="You have Obesity class 3, follow our healthplan.";
     
   } else {
     classificationMessage="Invalid BMI value.";
@@ -92,6 +92,7 @@ const BmiResults =()=>{
   const ResetScreen =()=>{
     setNewHeight("");
     setNewWeight("");
+  
     setBmi(null)
   }
   
@@ -103,8 +104,8 @@ const BmiResults =()=>{
      
        <div className={styles.input}>
         <h1>Welcome to BMI Calculator...please enter your height and weight to get started.</h1>
-       <p><b>Body Mass Index</b> is a simple and widely used measure to assess a person's body weight relative to their height. It helps determine whether an individual is <b>underweight,</b>  <b>healthy</b> , <b>overweight</b>  or <b>obese.</b> 
-       Using our <b>BMI Calculator tool</b>, you will be able to monitor your health status,keep track of your BMI, promote awareness and healthier lifestyle choices.</p> 
+       <p><b>Body Mass Index</b> is a simple and widely used measure to assess a person's body weight relative to their height. It helps determine whether an individual is <b>underweight,</b>  <b>healthy</b> , <b>overweight</b>  or <b>obese.</b>  
+       Using our <b>BMI Calculator tool</b>, you will be able to monitor your health status, keep track of your BMI, promote awareness and healthier lifestyle choices.</p> 
 
             <label htmlFor="weight">Select weight: <select value={weightUnit} onChange={handleWeightUnitChange} >
               <option value="kgs">kgs</option>
@@ -141,7 +142,7 @@ const BmiResults =()=>{
         <table>
           <thead>
             <tr>
-            <th>BMI(kg/m&sup2)</th>
+            <th>BMI(kg/m&sup2;)</th>
             <th>Classification</th>
             </tr>
           </thead>
