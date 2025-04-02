@@ -67,6 +67,11 @@ const BmiResults =()=>{
     let weightInKg = parseFloat(weight);
     let heightInmeters = parseFloat(height);
 
+    if (isNaN(weightInKg) || isNaN(heightInmeters) || weightInKg <= 0 || heightInmeters <= 0) {
+      alert("Please enter valid positive numbers for weight and height.");
+      return;
+    }
+
     if(weightUnit === "lbs"){
       weightInKg = (weightInKg * 0.453592);
 
@@ -86,8 +91,6 @@ const BmiResults =()=>{
       } 
         
         
-      
-  
 
   const ResetScreen =()=>{
     setNewHeight("");
